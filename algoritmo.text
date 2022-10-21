@@ -36,3 +36,4 @@ escreva: ("Insira quantas doses você já tomou.")
 leia: dosesCovid
 }
 se resposta = não {
+}
