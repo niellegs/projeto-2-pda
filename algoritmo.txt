@@ -19,6 +19,7 @@ alergia:
 semAlergia:
 sintomas:
 duraçãoSintomas:
+urgencia:
 
 escreva: ("Qual o seu nome?")
 leia (Paciente)
@@ -82,4 +83,24 @@ escreva: ("Quais são os seus sintomas? Conte-nos o que você está sentindo.")
 leia: (sintomas)
 escreva: ("Há quanto tempo está sentindo isso?")
 leia: (duraçãoSintomas)
-
+escreva: ("Chegamos ao fim do nosso atendimento on-line, por favor aguarde a resposta da nossa equipe. Logo te encaminharemos a algum setor.")
+se setor = verde {
+    escreva: ("Nossa equipe concluiu que o seu caso é de baixa gravidade. Você foi encaminhada para o setor verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = verde {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade baixa. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = amarelo {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade moderada. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = laranja {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade média. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = vermelho {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade alta. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
