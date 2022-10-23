@@ -1,23 +1,38 @@
 Var 
 paciente: 
 senha: 
+atendPresencial:
+atendOnline:
+
 dataDeNascimento:
 idade:
 cpf:
 rg:
 vacinaCovid:
 dosesCovid:
+semDosesCovid:
+doenças:
+semDoenças:
+remédios:
+semRemédios:
+alergia:
+semAlergia:
+sintomas:
+duraçãoSintomas:
 
 escreva: ("Qual o seu nome?")
 leia (Paciente)
 escreva: ("Por favor, pegue uma senha")
+escreva: (NumAleatório)
 leia: (Senha)
 escreva: ("Você gostaria de acelerar seu atendimento preenchendo um formulário?")
 se resposta = não {
 escreva: ("Tudo bem, você logo será chamado por um de nossos atendentes.")
+leia: (atendPresencial)
 }
 se resposta = sim {
 escreva: ("Tudo bem, faremos algumas perguntas agora.")
+leia: (atendOnline)
 }
 
 //informações iniciais
@@ -36,4 +51,34 @@ escreva: ("Insira quantas doses você já tomou.")
 leia: dosesCovid
 }
 se resposta = não {
+    leia: semDosesCovid
 }
+escreva: ("possui alguma doença?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais doenças você possui.")
+    leia: (doenças)
+}
+se resposta = não {
+    leia: (semDoenças)
+}
+escreva: ("toma alguma medicação?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais remédios você faz uso.")
+    leia: (remédios)
+}
+se resposta = não {
+    leia: (semRemédios)
+}
+escreva: ("possui alergia a algum remédio?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais remedios você possui alergia.")
+    leia: (alergia)
+}
+se resposta = não {
+    leia: (semAlergia)
+}
+escreva: ("Quais são os seus sintomas? Conte-nos o que você está sentindo.")
+leia: (sintomas)
+escreva: ("Há quanto tempo está sentindo isso?")
+leia: (duraçãoSintomas)
+
