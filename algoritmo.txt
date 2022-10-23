@@ -2,8 +2,8 @@ Var
 paciente: 
 senha: 
 atendPresencial:
+fimAtendimento:
 atendOnline:
-
 dataDeNascimento:
 idade:
 cpf:
@@ -29,6 +29,7 @@ escreva: ("Você gostaria de acelerar seu atendimento preenchendo um formulário
 se resposta = não {
 escreva: ("Tudo bem, você logo será chamado por um de nossos atendentes.")
 leia: (atendPresencial)
+leia: (fimAtendimento)
 }
 se resposta = sim {
 escreva: ("Tudo bem, faremos algumas perguntas agora.")
