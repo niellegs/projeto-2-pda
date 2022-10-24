@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="form.css"/>
+</head>
+
+<body>
+    <form>
+    <div>
+        <h1>Pré-Abertura Ficha</h1>
+        <h3>Olá! Bem vindo ao formulário de Pré-Abertura de Ficha do Sistema de Saúde PDA.</h3>
+        <p>Abaixo, você encontrará algumas perguntas sobre como está se sentindo e suas informações básicas.</p>
+        <p>Responda tudo o mais completo possível por favor.</p>
+        <p>Espero que você tenha um ótimo atendimento!</p>
+    </div>
+    <br>
+    <div>
+        <label>Qual seu <strong>nome completo?</strong></label>
+        <input type="text" name="nome completo" id="nome completo">
+        <label>Sua data de nascimento?</label>
+        <input type="date" name="data de nascimento" id="data de nascimento">
+        <label>Quantos anos você tem?</label>
+        <input type="number" name="idade" id="idade">
+    </div>
+    <br>
+    <div>
+        <label>Qual seu email?</label>
+        <input type="email" name="email" id="email">
+        <label>Qual seu endereço? PS: Não esqueça do numero e CEP.</label>
+        <input type="text" name="endereço" id="endereço">
+        <label>Qual seu numero WhatsApp?</label>
+        <input type="tel" name="numero" id="numero">
+    </div>
+    <br>
+    <div>
+        <label>Qual seu CPF?</label>
+        <input type="number" name="CPF" id="CPF">
+        <label>Qual seu RG?</label>
+        <input type="number" name="RG" id="RG">
+    </div>
+    <br>
+    <div>
+        <label>Você tomou a vacina do COVID? Se sim, <strong>quantas doses?</strong></label>
+        <input type="checkbox" name="Uma dose" id="Uma dose">
+        <label for="Uma dose">Uma dose</label>
+        <input type="checkbox" name="Duas doses" id="Duas doses">
+        <label for="Duas doses">Duas doses</label>
+        <input type="checkbox" name="Três doses" id="Três doses">
+        <label for="Três doses">Três doses</label>
+        <input type="checkbox" name="Quatro doses" id="Quatro doses">
+        <label for="Quatro doses">Quatro doses</label>
+        <input type="checkbox" name="Não tomei a vacina." id="Não tomei a vacina.">
+        <label for="Não tomei a vacina.">Não tomei a vacina.</label>
+    </div>
+    <br>
+    <div>
+       <label>Você tem alguma doença? Se sim, qual(s)?</label>
+       <input type="text" name="doença" id="doença"> 
+    </div>
+    <br>
+    <div>
+       <label>Toma alguma medicação? Se sim, qual(s)?</label>
+       <input type="text" name="medicação" id="medicação">
+    </div>
+    <br>
+    <div>
+       <label>Tem alergia à algum remédio/medicação? Se sim, qual(s)?</label>
+       <input type="text" name="alergia" id="alergia"> 
+    </div>
+    <br>
+
+    <div>
+        <label>O que você está sentindo hoje? Liste tudo que te parecer importante</label>
+        <input type="text" name="estado" id="estado">
+        <br>
+        <label>A quanto tempo está com esses sintomas?</label>
+        <input type="text" name="sintomas" id="sintomas">
+        <label>Tomou algum remédio ou fez algum tratamento em casa?</label>
+        <input type="radio" name="tratamento em casa" id="tratamento em casa">
+        <option value="Sim">Sim</option>
+        <input type="radio" name="tratamento em casa" id="tratamento em casa">
+        <option value="Não">Não</option>
+    </div>
+
+    <div>
+        <button>Enviar</button>
+    </div>
+
+</form>
+</body>
+</html>
