@@ -6,20 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" type="text/css" href="form.css"/>
+
+<style>
+    button:hover {
+        color: white;
+        background-color: purple;
+    }
+</style>
 </head>
 
 <body>
-    <form>
-    <div>
+
+    <form class="form">
+
+<header class="main">  
+    <div class="main">
         <h1>Pré-Abertura Ficha</h1>
-        <h3>Olá! Bem vindo ao formulário de Pré-Abertura de Ficha do Sistema de Saúde PDA.</h3>
+        <img class="main-imagem" src="logo.svg" alt="simbolo pda" width="20%" height="20%">
+    </div>
+</header>   
+
+<main class="section">
+    <h3>Olá! Bem vindo ao formulário de Pré-Abertura de Ficha do Sistema de Saúde PDA.</h3>
         <p>Abaixo, você encontrará algumas perguntas sobre como está se sentindo e suas informações básicas.</p>
         <p>Responda tudo o mais completo possível por favor.</p>
         <p>Espero que você tenha um ótimo atendimento!</p>
-    </div>
+</main>
+
     <br>
-    <div>
-        <label>Qual seu <strong>nome completo?</strong></label>
+    <div class="section-i">
+        <label>Qual seu<strong>nome completo?</strong></label>
         <input type="text" name="nome completo" id="nome completo">
         <label>Sua data de nascimento?</label>
         <input type="date" name="data de nascimento" id="data de nascimento">
@@ -27,23 +43,29 @@
         <input type="number" name="idade" id="idade">
     </div>
     <br>
-    <div>
+    <div class="section-ii">
         <label>Qual seu email?</label>
         <input type="email" name="email" id="email">
         <label>Qual seu endereço? PS: Não esqueça do numero e CEP.</label>
         <input type="text" name="endereço" id="endereço">
+    </div>
+    <br>
+
+    <div class="section-wpp">
         <label>Qual seu numero WhatsApp?</label>
         <input type="tel" name="numero" id="numero">
     </div>
+
     <br>
-    <div>
+
+    <div class="section-iii">
         <label>Qual seu CPF?</label>
         <input type="number" name="CPF" id="CPF">
         <label>Qual seu RG?</label>
         <input type="number" name="RG" id="RG">
     </div>
     <br>
-    <div>
+    <div class="section-iv">
         <label>Você tomou a vacina do COVID? Se sim, <strong>quantas doses?</strong></label>
         <input type="checkbox" name="Uma dose" id="Uma dose">
         <label for="Uma dose">Uma dose</label>
@@ -57,28 +79,31 @@
         <label for="Não tomei a vacina.">Não tomei a vacina.</label>
     </div>
     <br>
-    <div>
+    <div class="section-v">
        <label>Você tem alguma doença? Se sim, qual(s)?</label>
        <input type="text" name="doença" id="doença"> 
     </div>
     <br>
-    <div>
+    <div class="section-vi">
        <label>Toma alguma medicação? Se sim, qual(s)?</label>
        <input type="text" name="medicação" id="medicação">
     </div>
     <br>
-    <div>
+    <div class="section-vii">
        <label>Tem alergia à algum remédio/medicação? Se sim, qual(s)?</label>
        <input type="text" name="alergia" id="alergia"> 
     </div>
     <br>
 
-    <div>
+    <div class="section-viii">
         <label>O que você está sentindo hoje? Liste tudo que te parecer importante</label>
         <input type="text" name="estado" id="estado">
         <br>
         <label>A quanto tempo está com esses sintomas?</label>
         <input type="text" name="sintomas" id="sintomas">
+    </div>
+
+    <div class="section-ix">
         <label>Tomou algum remédio ou fez algum tratamento em casa?</label>
         <input type="radio" name="tratamento em casa" id="tratamento em casa">
         <option value="Sim">Sim</option>
@@ -86,8 +111,8 @@
         <option value="Não">Não</option>
     </div>
 
-    <div>
-        <button>Enviar</button>
+    <div class="button">
+        <button class="button">Enviar</button>
     </div>
 
 </form>
