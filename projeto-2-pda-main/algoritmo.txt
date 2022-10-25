@@ -1,0 +1,106 @@
+Var 
+paciente: 
+senha: 
+atendPresencial:
+fimAtendimento:
+atendOnline:
+dataDeNascimento:
+idade:
+cpf:
+rg:
+vacinaCovid:
+dosesCovid:
+semDosesCovid:
+doenças:
+semDoenças:
+remédios:
+semRemédios:
+alergia:
+semAlergia:
+sintomas:
+duraçãoSintomas:
+urgencia:
+
+escreva: ("Qual o seu nome?")
+leia (Paciente)
+escreva: ("Por favor, pegue uma senha")
+escreva: (NumAleatório)
+leia: (Senha)
+escreva: ("Você gostaria de acelerar seu atendimento preenchendo um formulário?")
+se resposta = não {
+escreva: ("Tudo bem, você logo será chamado por um de nossos atendentes.")
+leia: (atendPresencial)
+leia: (fimAtendimento)
+}
+se resposta = sim {
+escreva: ("Tudo bem, faremos algumas perguntas agora.")
+leia: (atendOnline)
+}
+
+//informações iniciais
+
+escreva: ("Informe a sua data de nascimento")
+leia: (dataDeNascimento)
+escreva: ("Informe a sua idade.")
+leia: (idade)
+escreva: ("Informe seu CPF.")
+leia: (cpf)
+escreva: ("Informe seu RG.")
+leia: (rg)
+escreva: ("Já se vacinou contra a covid-19?")
+se resposta = sim {
+escreva: ("Insira quantas doses você já tomou.")
+leia: dosesCovid
+}
+se resposta = não {
+    leia: semDosesCovid
+}
+escreva: ("possui alguma doença?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais doenças você possui.")
+    leia: (doenças)
+}
+se resposta = não {
+    leia: (semDoenças)
+}
+escreva: ("toma alguma medicação?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais remédios você faz uso.")
+    leia: (remédios)
+}
+se resposta = não {
+    leia: (semRemédios)
+}
+escreva: ("possui alergia a algum remédio?")
+se resposta = sim {
+    escreva: ("Por favor, informe quais remedios você possui alergia.")
+    leia: (alergia)
+}
+se resposta = não {
+    leia: (semAlergia)
+}
+escreva: ("Quais são os seus sintomas? Conte-nos o que você está sentindo.")
+leia: (sintomas)
+escreva: ("Há quanto tempo está sentindo isso?")
+leia: (duraçãoSintomas)
+escreva: ("Chegamos ao fim do nosso atendimento on-line, por favor aguarde a resposta da nossa equipe. Logo te encaminharemos a algum setor.")
+se setor = verde {
+    escreva: ("Nossa equipe concluiu que o seu caso é de baixa gravidade. Você foi encaminhada para o setor verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = verde {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade baixa. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = amarelo {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade moderada. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = laranja {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade média. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
+se urgencia = vermelho {
+    escreva: ("Nossa equipe concluiu que o seu caso é de gravidade alta. Você foi encaminhada para o setor de urgência verde. Por favor, vá até lá e aguarde o seu atendimento")
+    leia: (fimAtendimento)
+}
